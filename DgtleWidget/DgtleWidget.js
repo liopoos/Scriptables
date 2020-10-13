@@ -29,7 +29,8 @@ const widget_conf = {
 const family = config.widgetFamily || 'large'
 
 let index = args.widgetParameter || 0
-if (!isNaN(index) && typeof index == 'number') {
+
+if (!isNaN(index)) {
   index = parseInt(index, 10)
 } else {
   index = 0
