@@ -5,9 +5,9 @@
 
 ## List
 
-| name        | desc                       |
-| ----------- | -------------------------- |
-| DgtleWidget | 数字尾巴「每日一言」小组件 |
+| name                                                         | desc                       |
+| ------------------------------------------------------------ | -------------------------- |
+| [DgtleWidget](https://github.com/mayuko2012/Scriptables/tree/main/DigtleWidget) | 数字尾巴「每日一言」小组件 |
 
 
 
