@@ -45,13 +45,19 @@ let order_list = {
     'family': ['large'],
     'color': '#ff9468',
     'text': await getCalendarNum(),
-  },
-  'calendar-event': {
+  }
+}
+
+let events = await getCalendarEvent()
+
+// if have event, show a event
+if (events != 0) {
+  order_list['calendar-event'] = {
     'order': '',
     'family': ['large'],
     'color': '#ff9468',
-    'text': await getCalendarEvent(),
-  },
+    'text': events,
+  }
 }
 
 let widget = createWidget()
@@ -210,6 +216,9 @@ async function getCalendarNum() {
 // get calender event
 async function getCalendarEvent() {
   let undo = await getCalendar()
+  if (undo.length <= 0) {
+    return 0
+  }
   let event = undo.pop()
   let allDay = 'All Day'
   if (!event.isAllDay) {
